@@ -1,0 +1,13 @@
+doctype html
+html
+    head
+        title Login Page
+    body
+        form(method='post', action='/login')
+            div
+                label ID:
+                input#username(name='id', type='text')
+            div
+                label PW:
+                input#password(name='pw', type='password')
+            button(type='submit') Submit
