@@ -1,5 +1,5 @@
-select trains.id, types.name as t,src.name as s, dst.name as d,
-count(*) as cur, types.max_seats as lim 
+select trains.id, types.name as type,src.name as src_stn, dst.name as dst_stn,
+count(*) as occupied, types.max_seats as maximum 
 from tickets join trains on trains.id = tickets.train
 join types on types.id = trains.type
 join stations as s1 on s1.id = trains.source
